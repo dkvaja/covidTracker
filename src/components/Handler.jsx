@@ -9,8 +9,8 @@ const Handler = () => {
   return (
     <Switch>
       <Route exact path="/" component={Dashboard} />
-      <Route exact path="/contact" component={ContactPage} />
-      <Route exact path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/about" component={AboutPage} />
       <Route component={ErrorPage} />
     </Switch>
   );
