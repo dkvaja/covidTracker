@@ -8,7 +8,7 @@ import { Route, Switch } from "react-router-dom";
 const Handler = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Dashboard} />
+      <Route path="/" component={Dashboard} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/about" component={AboutPage} />
       <Route component={ErrorPage} />
