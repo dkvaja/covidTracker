@@ -1,8 +1,11 @@
 import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Handler from './components/Handler';
 import Dashboard from "./components/Dashboard";
+import ContactPage from "./components/Contact";
+import AboutPage from "./components/About";
+import ErrorPage from "./components/Error";
+
 import {
   BrowserRouter as Router,
   Redirect,
@@ -15,8 +18,13 @@ const App = () => {
   return (
     <>
       <Router>
-      <Navbar/>
-      <Handler/>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/about" component={AboutPage} />
+          <Route component={ErrorPage} />
+        </Switch>
       </Router>
       <Footer />
     </>
