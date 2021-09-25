@@ -7,7 +7,7 @@ import AboutPage from "./components/About";
 import ErrorPage from "./components/Error";
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Redirect,
   Route,
   Link,
@@ -17,7 +17,7 @@ import {
 const App = () => {
   return (
     <>
-      <Router>
+      <Router basename='/' >
         <Navbar />
         <Switch>
           <Route exact path="/" component={Dashboard} />
